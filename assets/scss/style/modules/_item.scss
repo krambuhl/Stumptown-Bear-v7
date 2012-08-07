@@ -1,0 +1,38 @@
+.item { 
+    text-align: center;
+    
+}
+ 
+.item-content { 
+    p, ul, ol { margin-bottom: $spacing; }
+    
+    h2, h3, h4, h5 { 
+        margin-bottom: $spacing; 
+        font-size: 24px;
+    }
+}
+
+.item-content-title { 
+    margin-top: $spacing;   
+    font-size: 36px !important; 
+}
+
+.item-content-challenge {
+    h3, h4 { }
+}
+
+.item-content-solution {
+    h3, h4 { }
+}
+
+.item-list {
+    list-style: square inside;
+    margin-bottom: $spacing-quad;
+    
+    li { margin-left: $spacing-quad; }
+}
+
+@include respond-to(wmobile) { @include grid(8);   };
+@include respond-to(tablet)  { @include grid(10);  };
+@include respond-to(normal)  { @include grid(12);  };
+@include respond-to(wide)    { @include grid(18);  };

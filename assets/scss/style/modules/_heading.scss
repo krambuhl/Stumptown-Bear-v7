@@ -1,0 +1,48 @@
+.heading {
+    display: block;
+    
+    padding: 130px 0 160px;
+    background: #333;
+}
+
+.heading-icon {    
+    margin: 0 auto;
+    
+    @include grid(4);
+    height: 137px;
+    
+}
+
+.heading-title {
+    margin: 12px auto 6px auto;
+    text-align: center;
+    
+    font-size: 30px;
+    font-weight: 300;
+    
+    color: white;
+}
+
+.heading-nav { 
+    display: block;
+    margin: 0 auto;
+    @include grid(4);
+    
+    color: white;
+    font-weight: 300;
+    
+    font-family:$site-header-fontfamily;
+    font-size: 16px;
+    text-transform: uppercase;
+    
+    & > li {
+        float: left;
+        
+        &:not(:last-child):after {
+            content: '.';
+            margin: 0 6px;
+        }
+    }
+    
+    & > li > a { color: white; text-decoration: none; }
+}

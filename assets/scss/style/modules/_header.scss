@@ -1,0 +1,49 @@
+.header {
+    position: relative;
+    width: 100%;
+    padding: 18px 0 18px 0;
+    
+    color: white;
+    font-weight: 300;
+    font-size: 30px;
+    
+    text-align: center;
+}
+
+.header-arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 12px;
+    margin-left: -50px;
+    
+    width: 100px;
+    height: 12px;
+    
+    color: #222;
+    
+    path { fill: #fff;}
+}
+
+.header-title {
+    font-weight: 500;
+    font-size: 30px;
+}
+
+
+.header-work { 
+    background-color: #4a975e; 
+    
+    & > .header-arrow { color: #4a975e; }
+}
+
+.header-history { 
+    background-color: #396f85; 
+    
+    & > .header-arrow { color: #396f85; }
+}
+
+.header-contact { 
+    background-color: #d44242; 
+    
+    & > .header-arrow { color: #d44242; }
+}

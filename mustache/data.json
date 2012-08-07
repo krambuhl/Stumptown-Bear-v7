@@ -1,0 +1,62 @@
+{
+    "title" : "Stumptown Bear Data",
+    "link"  : "http://stumptownbear.com",
+    
+    "work" : [{
+        "id" : "southridge-high-school",
+        "link" : "/work/southridge-high-school/",
+        "title" : "Southridg High School Redesign",
+        "content" : [
+            "<p>Southridge High School was in dire need of a refresh, last coded in 1999 when Southridge opened it's doors.  As a graduate of Southridge, I had a connections with the dean of computer science who maintained the schools website.  He called me in to redesign the site to make it more useable and modern.</p>",
+            
+            "<div class=\"item-content-challenge\"><h4>The Challenge</h4>",
+            "<p>Working within a strict set of guidelines was the challenge for this project.  The site had to its content in a useable and accessible way; it also had to support an amazing amount of different static content.  My job was to redesign and temple a new front end for Southridge's website using modern techniques.</p></div>",
+        	
+        	"<div class=\"item-content-solution\"><h4>The Solution</h4>",
+        	"<p>The solution was to build many different generic html templates around a clean structure.  The front end was coded as simply as possible knowing that IE6 was the default browser for the computers in the school.  Part of the redesign was revamping the schools crest and mascot image.  I vectorized, cleaned up, and recolored both the crest and mascot to have a bit more polish.</p></div>",
+        	
+        	"<h5>Technologies Utilized</h5>"
+        ],
+        
+        "technologies" : [
+    	   "Photoshop",
+    	   "Illustrator",
+    	   "HTML / CSS2",
+    	   "Javascript"
+        ],
+        
+        "media" : [
+            "http://stream.stumptownbear.com/work/fullsize/srhs-1.jpg",
+            "http://stream.stumptownbear.com/work/fullsize/srhs-2.jpg"
+        ]
+    }],
+    
+    "timeline" : [{
+        "year"  : "2003",
+        "story" : "I played Warcraft 3 custom games every morning before school in the 7th and 8th grades. In the evenings I learned how to program JASS to make my own maps."
+    }, {
+        "year"  : "2004",
+        "story" : "I took my first offical programming class at Southridge High School.  I learned VB.NET from an incredible teacher, who would end up hiring me to redesign and develop the school's website."
+    }, {
+        "year"  : "2005",
+        "story" : "I built my first website fontend after seeing a presentation on pseudo-selectors and there uses in interaction.  This was my first time delving into interactivity."
+    }, {
+        "year"  : "2006",
+        "story" : "I started studying C++ on my own using my teacher as resource of unlimited knowledge."
+    }, {
+        "year"  : "2007",
+        "story" : "Designed and programmed my first blog from scratch.  It was pastel and dark gray, it used lots of grunge and noise; looking back, it was not very good looking, but it worked well."
+    }, {
+        "year"  : "2008",
+        "story" : "I barely graduated from High School because I was spending all my time engrossed in my computer; I was learning to code javascript and use my love for geometry and color in design."
+    }, {
+        "year"  : "2009",
+        "story" : "I studied music theory and composition by a Jazz Saxist that had clearly smoked too many cigarettes and snorted a stream of cocaine in his younger days."
+    }, {
+        "year"  : "2011",
+        "story" : "After wandering through life for a year, doing art and music, I jumped back into creating code and designing, I found passion in beautiful user interface and evolving interaction."
+    }, {
+        "year"  : "2012",
+        "story" : "I drunkenly sent out 7 applications out to web companies around Portland, OR.  After a strange, strange interview with Webtrends, that included a 12oz mirror pond ale, I was hired as an Interactive Designer in their Design Lab."
+    }]
+}

@@ -1,0 +1,48 @@
+$respong-wmobile: "only screen and (min-width:  480px) and (max-width: 767px)";
+$respond-tablet:  "only screen and (min-width:  768px) and (max-width: 991px)";
+$respond-normal:  "only screen and (min-width:  992px) and (max-width: 1279px)";
+$respond-wide:    "only screen and (min-width: 1280px)";
+
+@mixin respond-to($media) {
+    @if $media == wmobile {
+        @media only screen and (min-width:  480px) and (max-width: 767px) { @content; }
+    }
+
+    @else if $media == tablet {
+        @media only screen and (min-width:  768px) and (max-width: 991px) { @content; }
+    }
+    
+    @else if $media == normal {
+        @media only screen and (min-width:  992px) and (max-width: 1379px) { @content; }
+    }
+    
+    @else if $media == wide {
+        @media only screen and (min-width: 1380px) { @content; }
+    }
+}
+
+body {
+    margin: 0 auto;
+    
+    
+    //@include respond-to(wmobile) { @include grid(8); };
+    //@include respond-to(tablet)  { @include grid(10);  };
+    //@include respond-to(normal)  { @include grid(12); font-size: 18px; };
+    //@include respond-to(wide)    { @include grid(18);  };
+}
+
+#header { 
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.slider-frame {
+    width: 100%;
+    overflow: hidden
+}
+
+
+#history {
+    margin-top: $spacing-quad;
+}

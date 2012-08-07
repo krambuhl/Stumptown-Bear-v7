@@ -1,0 +1,27 @@
+{{#work}}
+    <article class="item" id="{{id}}">
+        <section class="slider">
+            <ul class="slider-list">{{#media}}
+                <li class="slider-frame"><img class="slider-image" src="{{.}}" /></li>
+            {{/media}}</ul>
+            
+            <nav class="slider-selector"><ol>{{#media}}
+                <li class="slider-selector-item"><a href="#{{link}}/"></a></li>
+            {{/media}}</ol></nav>
+        </section>
+        
+        <section class="item-content">
+            <h2 class="item-content-title">{{title}}</h2>
+            
+            {{#content}}
+                {{&.}}      
+            {{/content}}
+            
+        	<ul class="item-list">{{#technologies}}
+        	    <li>{{.}}</li>
+        	{{/technologies}}</ul>
+        </section>
+    </article>
+    
+    <hr />
+{{/work}}

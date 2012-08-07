@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+    <title>Stumptown Bear</title>
+    <meta name="description" content="The home of Evan Krambuhl on the web: A Developer/Designer/Musician." /> 
+    <meta name="author" content="Evan Price, StumptownBear.com" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="google-site-verification" content="6safdd8MsS2Sd98l5umrfDt-bEMfn7jykkEHbG_Tquw" />
+    
+    <meta property="og:title" content="Stumptown Bear" />
+    <meta property="og:description" content="The home of Evan Krambuhl on the web: A Developer/Designer/Musician." />
+    <meta property="og:image" content="http://stream.stumptownbear.com/favicon-128.png" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <link rel="shortcut icon"    href="http://stream.stumptownbear.com/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="http://stream.stumptownbear.com/favicon-128.png" />
+    
+    <link rel="alternate" type="application/json" title="Stumptown Bear Work" href="http://v7.proto.stumptownbear.com/data.rss" />
+    
+    
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <!-- library scripts / @font-face -->
+	<script src="assets/library/jquery.min.js"></script>
+	<script src="assets/library/raphael.min.js"></script>
+	<script src="assets/library/jquery.mustache.js"></script>
+	<script src="assets/library/jquery.ui.map.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    
+	<!-- user library scripts -->
+    <script src="assets/scripts/jquery.vectorectus.js"></script>  
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' />
+    
+    
+    <!-- module scripts -->
+    
+    <!-- user scripts / style -->
+    <link href="assets/style.css" rel="stylesheet" />      
+    <script src="assets/scripts/script.js"></script>
+</head>
+
+<body>
+
+<header id="header" data-parallax-speed="1.2">
+    <div class="heading">
+        <div class="heading-icon" data-vectorectus="logo.stumptownbear"></div>
+        <h1  class="heading-title">Stumptown Bear</h1>
+        <nav><ul class="heading-nav">
+            <li><a href="#/work/">Work</a></li>
+            <li><a href="#/history/">History</a></li>
+            <li><a href="#/contact/">Contact</a></li>
+        </ul></nav>
+    </div>
+</header>
+
+<section id="work" data-parallax-speed="1.4" data-template="mustache/work.mustache">
+    <header  class="header header-work">
+        <h2  class="header-title">Work</h2>
+        <div class="header-arrow header-arrow-down" data-vectorectus="arrow.up"></div>
+    </header>
+</section>
+
+<section id="history" data-parallax-speed="1.3">
+    <header class="header header-history">
+        <h2 class="header-title">History</h2>
+        <div class="header-arrow header-arrow-up vectorectus" data-vectorectus="arrow.up"></div>
+    </header>
+    
+    <section class="timeline">
+        <ul id="timeline" class="timeline-list" data-template="mustache/timeline.mustache"></ul>
+    </section>
+</section>
+
+<section id="contact" data-parallax-speed="1.2">
+    <header class="header header-contact">
+        <h2 class="header-title">Contact</h2>
+        <div class="header-arrow header-arrow-up" data-vectorectus="arrow.up"></div>
+    </header>
+    
+    <section class="footer">
+        <p>There are a few different ways to get a hold of me, feel free to drop a line to say hello or ask for my expertise on your project.</p>
+        
+        <ul class="footer-contacts">
+            <li class="media"><a hre="https://twitter.com/evan_is">
+                <i class="media-icon media-icon-48" data-shape="logo.twitter"></i>
+                <span class="media-label">@evan</span>
+            </a></li>
+            
+            <li class="media"><a hre="https://twitter.com/evan_is">
+                <i class="media-icon media-icon-48" data-vectorectus-shape="icon.mail"></i>
+                <span class="media-label">evan.krambuhl@gmail.com</span>
+            </a></li>
+            
+            <li class="media"><a hre="https://twitter.com/evan_is">
+                <i class="media-icon media-icon-48" data-vectorectus-shape="icon.phone"></i>
+                <span class="media-label">(971) 340-6170</span>
+            </a></li>
+        </ul>
+    </section>
+</section>
+
+
+
+
+</body>
+</html>
