@@ -4,11 +4,16 @@
 }
  
 .item-content { 
-    p, ul, ol { margin-bottom: $spacing; }
+    margin: 0 auto;
+    
+    p, ul, ol { margin-bottom: $spacing; padding: 0; }
     
     h2, h3, h4, h5 { 
+        clear: both;
         margin-bottom: $spacing; 
         font-size: 24px;
+        font-weight: 500;
+        line-height: 1.1em;
     }
 }
 
@@ -17,22 +22,66 @@
     font-size: 36px !important; 
 }
 
+.item-content-challenge,
+.item-content-solution {
+    @include grid(9);
+    margin:  $spacing 0;
+    padding: 0 $spacing;
+    
+    h4 { font-size: 30px; }
+}
+
+
 .item-content-challenge {
-    h3, h4 { }
+    float: right;
+    text-align: left;
 }
 
 .item-content-solution {
-    h3, h4 { }
+    float: left; 
+    text-align: right;
 }
 
-.item-list {
-    list-style: square inside;
-    margin-bottom: $spacing-quad;
+.item-content > p {
+    padding: 0 $spacing; 
+}
+
+
+.item-content { 
+    @include rgrid(screen);
     
-    li { margin-left: $spacing-quad; }
+    & > p { @include rgrid(small); margin-left: auto; margin-right: auto; }
+    
 }
 
-@include respond-to(wmobile) { @include grid(8);   };
-@include respond-to(tablet)  { @include grid(10);  };
-@include respond-to(normal)  { @include grid(12);  };
-@include respond-to(wide)    { @include grid(18);  };
+@include respond(mobile) { 
+    .item-content   { @include rgrid(mobile); }
+    .item-content > p { @include rgrid(mobile); }
+    
+    .item-content-challenge,
+    .item-content-solution {
+        @include rgrid(mobile);
+        text-align: center;
+    }
+}
+
+@include respond(tablet) { 
+    .item-content     { @include rgrid(tablet); }
+    .item-content > p { @include rgrid(tablet); }
+    
+    .item-content-challenge,
+    .item-content-solution {
+        @include rgrid(tablet);
+        text-align: center;
+    }
+}
+
+@include respond(small) { 
+    .item-content     { @include rgrid(small); }
+    .item-content > p { @include rgrid(tablet); }
+    
+    .item-content-challenge,
+    .item-content-solution {
+        @include grid(6);
+    }
+}

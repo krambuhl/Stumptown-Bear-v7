@@ -3,6 +3,12 @@
     
     padding: 130px 0 160px;
     background: #333;
+      
+    @include respond(mobile) { padding: 100px 0 120px; }
+    @include respond(tablet) { padding: 110px 0 130px; }
+    
+    @include respond(large)  { padding: 150px 0 180px; }
+    @include respond(huge)   { padding: 170px 0 200px; } 
 }
 
 .heading-icon {    
@@ -14,7 +20,7 @@
 }
 
 .heading-title {
-    margin: 12px auto 6px auto;
+    margin: $spacing auto 0 auto;
     text-align: center;
     
     font-size: 30px;

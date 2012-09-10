@@ -1,6 +1,6 @@
 @import "compass/utilities";
 @import "compass/css3";
-@import "includes/reset";
+@import "compass/reset";
 
 @import 'style/variables';
 @import "style/base";
@@ -11,6 +11,7 @@
 @import "style/modules/media";
 @import "style/modules/header";
 @import "style/modules/item";
+@import "style/modules/slider";
 @import "style/modules/timeline";
 @import "style/modules/footer";
 

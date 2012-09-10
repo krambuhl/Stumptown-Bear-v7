@@ -1,48 +1,61 @@
-$respong-wmobile: "only screen and (min-width:  480px) and (max-width: 767px)";
-$respond-tablet:  "only screen and (min-width:  768px) and (max-width: 991px)";
-$respond-normal:  "only screen and (min-width:  992px) and (max-width: 1279px)";
-$respond-wide:    "only screen and (min-width: 1280px)";
-
-@mixin respond-to($media) {
-    @if $media == wmobile {
-        @media only screen and (min-width:  480px) and (max-width: 767px) { @content; }
-    }
-
-    @else if $media == tablet {
-        @media only screen and (min-width:  768px) and (max-width: 991px) { @content; }
-    }
-    
-    @else if $media == normal {
-        @media only screen and (min-width:  992px) and (max-width: 1379px) { @content; }
-    }
-    
-    @else if $media == wide {
-        @media only screen and (min-width: 1380px) { @content; }
-    }
-}
-
-body {
-    margin: 0 auto;
-    
-    
-    //@include respond-to(wmobile) { @include grid(8); };
-    //@include respond-to(tablet)  { @include grid(10);  };
-    //@include respond-to(normal)  { @include grid(12); font-size: 18px; };
-    //@include respond-to(wide)    { @include grid(18);  };
-}
-
-#header { 
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-}
-
 .slider-frame {
     width: 100%;
     overflow: hidden
 }
 
+.layout-header {
+    margin: $spacing-quad auto 0 auto;
+    
+    @include respond(mobile) { @include rgrid(mobile); margin-top: 0; }
+    @include respond(tablet) { @include rgrid(tablet); margin-top: $spacing;}
+    @include respond(small)  { @include rgrid(small);  margin-top: $spacing-double; }
+    @include respond(screen) { @include rgrid(screen); }
+    @include respond(large)  { @include rgrid(large);  }
+    @include respond(huge)   { @include rgrid(huge);   } 
+}   
 
-#history {
+.layout-section {
     margin-top: $spacing-quad;
+}
+
+
+
+* {
+    @include transition-property(width, height, margin, padding);
+    @include transition-duration(0.25s);
+    @include transition-timing-function(ease-in);
+}
+
+
+
+
+// Testing grid.
+
+.grid {
+    position: fixed;
+    
+    z-index: -1;
+    
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.grid-display {     
+    @include transition-property(width, opacity);
+    @include transition-duration(0.1s);
+    @include transition-timing-function(ease-in);
+    @include opacity(0.05);
+
+    height: 100%;
+    margin: 0 auto;
+    background: url("http://stream.stumptownbear.com/grids/48.12.png") top left repeat;
+    
+    @include respond(mobile) { @include rgrid(mobile); }
+    @include respond(tablet) { @include rgrid(tablet); }
+    @include respond(small)  { @include rgrid(small);  }
+    @include respond(screen) { @include rgrid(screen); }
+    @include respond(large)  { @include rgrid(large);  }
+    @include respond(huge)   { @include rgrid(huge);   }
 }

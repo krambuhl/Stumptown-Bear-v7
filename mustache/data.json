@@ -5,7 +5,7 @@
     "work" : [{
         "id" : "southridge-high-school",
         "link" : "/work/southridge-high-school/",
-        "title" : "Southridg High School Redesign",
+        "title" : "Southridge High School Redesign",
         "content" : [
             "<p>Southridge High School was in dire need of a refresh, last coded in 1999 when Southridge opened it's doors.  As a graduate of Southridge, I had a connections with the dean of computer science who maintained the schools website.  He called me in to redesign the site to make it more useable and modern.</p>",
             
@@ -57,6 +57,6 @@
         "story" : "After wandering through life for a year, doing art and music, I jumped back into creating code and designing, I found passion in beautiful user interface and evolving interaction."
     }, {
         "year"  : "2012",
-        "story" : "I drunkenly sent out 7 applications out to web companies around Portland, OR.  After a strange, strange interview with Webtrends, that included a 12oz mirror pond ale, I was hired as an Interactive Designer in their Design Lab."
+        "story" : "I drunkenly sent out 7 applications out to web companies around Portland, OR.  After a strange, strange interview with Webtrends, that included a 12oz mirror pond ale, I was hired as an Interactive Designer in their newly forming Digital Inteligence Lab."
     }]
 }

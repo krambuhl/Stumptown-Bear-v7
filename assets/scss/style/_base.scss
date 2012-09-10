@@ -1,33 +1,3 @@
-$baseline: 16px;
-$fontsize-xsmall: $baseline / 2;
-$fontsize-small:  $baseline / (1.5);
-$fontsize-normal: $baseline;
-$fontsize-medium: $baseline * 2;
-$fontsize-large:  $baseline * 3;
-
-// WE'RE ON THE GRID, MOTHER FUCKER!
-
-$collumn-max: 12;
-$column: 48px;
-$gutter: 12px;
-
-@mixin grid ($span, $offset: 0px) { width:  ($column * $span) + ($gutter * ($span - 1)) + $offset; }
-
-// Site-wide Variables
-
-$site-fontfamily: "Droid Serif", serif;
-$site-header-fontfamily: "Museo Sans";
-
-
-// COLORS
-
-$site-color-bg:   #fff;
-$site-color-font: #333;
-	
-$selection-bg:    black; // when a user highlights text this is the super duper color!
-$selection-color: white; // when a user highlights text this is the super duper color!
-
-
 body {		
     background: $site-color-bg;
 	color: $site-color-font;
@@ -36,6 +6,7 @@ body {
 	text-decoration: none;
 	text-align: left;
 	
+	line-height: 1.5em;
 	word-wrap: normal;
 	
 	font-variant: normal;
@@ -49,10 +20,10 @@ body {
     -webkit-tap-highlight-color: $selection-color; 
 }
 
-::selection 	 	{ background: $selection-bg; color: $selection-color; }
-::-moz-selection 	{ background: $selection-bg; color: $selection-color; }
-img::selection 		{ background: $selection-bg; color: $selection-color; }
-img::-moz-selection	{ background: $selection-bg; color: $selection-color; } 
+::selection 	 	{ background: invert($selection-color); color: $selection-color; }
+::-moz-selection 	{ background: invert($selection-color); color: $selection-color; }
+img::selection 		{ background: invert($selection-color); color: $selection-color; }
+img::-moz-selection	{ background: invert($selection-color); color: $selection-color; } 
 
 
 a        { color: $site-color-font; text-decoration: underline; }
@@ -62,8 +33,8 @@ a:active { color: $site-color-font; text-decoration: underline; }
 em, cite { font-style: italic; font-weight: normal; }
 hr       { display: none; }
 
-h1             { font-weight: 700; }
-h2, h3, h4, h5 { font-weight: 500; }
+h1, h2     { font-weight: 500; }
+h3, h4, h5 { font-weight: 500; }
 
 h1, h2, h3, h4, h5 {
     font-family: $site-header-fontfamily;
