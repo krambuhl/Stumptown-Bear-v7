@@ -7,13 +7,13 @@
         "link" : "/work/webtrends-today/",
         "title" : "Webtrends Today - iPad App",
         "content" : [
-            "<p>I worked with <a href=\"http://www.mrdiggles.com/\">Benjamin Diggles</a> and <a href=\"https://twitter.com/rderstadt\">Rob Derstadt</a> to build an app that shows how user's are doing in the social space.  The goal was to keep it concise; discover what is working on the user's social accounts and, if they are a Webtrends Analytics customer, see how their spaces are doing in A10.</p>",
+            "<p>I worked with <a href=\"http://www.mrdiggles.com/\">Benjamin Diggles</a> and <a href=\"https://twitter.com/rderstadt\">Rob Derstadt</a> to build an app that shows how users are doing in the social space.  The goal was to keep it concise; discover what is working on the user's social accounts and, if they are a Webtrends Analytics customer, see how their spaces are doing in A10.</p>",
             
             "<div class=\"item-content-left\"><h4>The Data</h4>",
-            "<p>Rob handed me raw api userdata from Facebook, Twitter, Youtube and Webtrends through a custom made web app wrapper.  My job was to sift through that mess and pull out useful and interesting metrics from each social network.  After I got that data &quot;clean,&quot; I pushed it out to the app screen for consumption.</p></div>",
+            "<p>Rob handed me raw API user data from Facebook, Twitter, Youtube and Webtrends through a custom-made web app wrapper.  My job was to sift through that mess and pull out useful and interesting metrics from each social network.  After I got that data &quot;clean,&quot; I pushed it out to the app screen for consumption.</p></div>",
         	
         	"<div class=\"item-content-right\"><h4>The Play</h4>",
-        	"<p>When the app loaded up the user was presented with 4 quadrents, each a different social network.  The user could then zoom in on each of them to &quot;Drill-Down&quot; for more detailed mesurements.</p>",
+        	"<p>When the app loaded up the user was presented with 4 quadrants, each a different social network.  The user could then zoom in on each of them to &quot;Drill-Down&quot; for more detailed measurements.</p>",
         	"<p>While tackling the interactions in the app, the general philosophy was to provide as much options as made sense.  If the user wanted to open up one the panels, they could tap or <a href=\"http://stream.stumptownbear.com/portfolio/wt-today/zoom.jpg\">zoom</a> or swipe. If the interaction made sense, I included it.</p></div>",
         	
         	"<h5>Technologies Utilized</h5>"
@@ -23,7 +23,7 @@
     	   "HTML5 / CSS3",
     	   "Javascript",
     	   "Social APIs",
-    	   "iOS"
+    	   "iOS and Touch"
         ],
         
         "media" : [ 
@@ -57,9 +57,9 @@
         "genre" : "Education",
         "raw"   : "education" 
     }, { 
-        "name"  : "Minutes App UIKit",
-        "genre" : "Design" ,
-        "raw"   : "design" 
+        "name"  : "Minutes App",
+        "genre" : "Time Management" ,
+        "raw"   : "time-management" 
     }, { 
         "name"  : "IOUNOI",
         "genre" : "Music",

@@ -26,9 +26,19 @@
     width: 100%;
 }
 
-.footer-paragraph {  @include grid(8);  margin: 0 auto $spacing-quad auto; text-align: center; }
-.footer-contacts  {  @include grid(12); margin: 0 auto $spacing-quad auto;}
+.footer-paragraph {  @include grid(8);  margin: 0 auto $spacing-double auto; text-align: center; }
+.footer-contacts  {  @include grid(12); margin: $spacing-double auto $spacing-quad auto;}
 
+
+.footer-break { 
+    display: block;
+    margin: 0 auto $spacing-double auto;
+    @include grid(4);
+    height: 1px;
+    
+    border: none;
+    background: #eee;
+}
 
 .footer-media {
     position: relative;

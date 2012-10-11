@@ -31,8 +31,10 @@ a        { color: $site-color-font; text-decoration: underline; }
 a:hover  { color: $site-color-font; text-decoration: underline; }
 a:active { color: $site-color-font; text-decoration: underline; }
 
-em, cite { font-style: italic; font-weight: normal; }
+em       { font-style: italic; font-weight: normal; }
 hr       { display: none; }
+
+cite     { border-bottom: 1px dashed #ccc; }
 
 h1, h2     { font-weight: 500; }
 h3, h4, h5 { font-weight: 500; }

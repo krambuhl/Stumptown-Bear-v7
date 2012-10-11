@@ -125,7 +125,7 @@ a:active {
 }
 
 /* line 34, scss/style/_base.scss */
-em, cite {
+em {
   font-style: italic;
   font-weight: normal;
 }
@@ -136,29 +136,34 @@ hr {
 }
 
 /* line 37, scss/style/_base.scss */
+cite {
+  border-bottom: 1px dashed #ccc;
+}
+
+/* line 39, scss/style/_base.scss */
 h1, h2 {
   font-weight: 500;
 }
 
-/* line 38, scss/style/_base.scss */
+/* line 40, scss/style/_base.scss */
 h3, h4, h5 {
   font-weight: 500;
 }
 
-/* line 40, scss/style/_base.scss */
+/* line 42, scss/style/_base.scss */
 h1, h2, h3, h4, h5 {
   font-family: "Museo Sans";
   text-transform: uppercase;
 }
 
-/* line 47, scss/style/_base.scss */
+/* line 49, scss/style/_base.scss */
 path {
   fill: white;
   stroke: none;
   stroke-width: 0;
 }
 
-/* line 57, scss/style/_base.scss */
+/* line 59, scss/style/_base.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -166,42 +171,42 @@ path {
   *behavior: url(assets/library/boxsizing.htc);
 }
 
-/* line 59, scss/style/_base.scss */
+/* line 61, scss/style/_base.scss */
 .left {
   float: left;
 }
 
-/* line 60, scss/style/_base.scss */
+/* line 62, scss/style/_base.scss */
 .right {
   float: right;
 }
 
-/* line 62, scss/style/_base.scss */
+/* line 64, scss/style/_base.scss */
 .block {
   display: block;
 }
 
-/* line 63, scss/style/_base.scss */
+/* line 65, scss/style/_base.scss */
 .inline {
   display: inline-block;
 }
 
-/* line 65, scss/style/_base.scss */
+/* line 67, scss/style/_base.scss */
 .relative {
   position: relative;
 }
 
-/* line 66, scss/style/_base.scss */
+/* line 68, scss/style/_base.scss */
 .absolute {
   position: absolute;
 }
 
-/* line 67, scss/style/_base.scss */
+/* line 69, scss/style/_base.scss */
 .fixed {
   position: fixed;
 }
 
-/* line 69, scss/style/_base.scss */
+/* line 71, scss/style/_base.scss */
 .clearfix {
   overflow: hidden;
   *zoom: 1;
@@ -745,20 +750,20 @@ path {
   margin-bottom: 12px;
   padding: 24px;
   text-align: left;
-  word-spacing: 999em;
   color: white;
   background: #333;
 }
-/* line 24, scss/style/modules/_partner.scss */
+/* line 23, scss/style/modules/_partner.scss */
 .partner-item:not(:nth-child(4n+1)) {
   margin-left: 12px;
 }
 
-/* line 27, scss/style/modules/_partner.scss */
+/* line 26, scss/style/modules/_partner.scss */
 .partner-name {
   line-height: 1.1em;
   font-size: 32px;
   font-weight: 700;
+  word-spacing: 999em;
 }
 
 /* line 33, scss/style/modules/_partner.scss */
@@ -1145,17 +1150,27 @@ path {
 /* line 29, scss/style/modules/_footer.scss */
 .footer-paragraph {
   width: 468px;
-  margin: 0 auto 48px auto;
+  margin: 0 auto 24px auto;
   text-align: center;
 }
 
 /* line 30, scss/style/modules/_footer.scss */
 .footer-contacts {
   width: 708px;
-  margin: 0 auto 48px auto;
+  margin: 24px auto 48px auto;
 }
 
 /* line 33, scss/style/modules/_footer.scss */
+.footer-break {
+  display: block;
+  margin: 0 auto 24px auto;
+  width: 228px;
+  height: 1px;
+  border: none;
+  background: #eee;
+}
+
+/* line 43, scss/style/modules/_footer.scss */
 .footer-media {
   position: relative;
   float: left;
@@ -1163,11 +1178,11 @@ path {
   height: 228px;
   overflow: hidden;
 }
-/* line 41, scss/style/modules/_footer.scss */
+/* line 51, scss/style/modules/_footer.scss */
 .footer-media:not(:nth-child(3n+1)) {
   margin-left: 12px;
 }
-/* line 43, scss/style/modules/_footer.scss */
+/* line 53, scss/style/modules/_footer.scss */
 .footer-media a {
   display: block;
   width: 100%;
@@ -1175,16 +1190,16 @@ path {
   color: white;
   background: #333;
 }
-/* line 51, scss/style/modules/_footer.scss */
+/* line 61, scss/style/modules/_footer.scss */
 .footer-media a:hover {
   background-color: #222;
 }
-/* line 54, scss/style/modules/_footer.scss */
+/* line 64, scss/style/modules/_footer.scss */
 .footer-media a:hover path {
   fill: #404040;
 }
 
-/* line 59, scss/style/modules/_footer.scss */
+/* line 69, scss/style/modules/_footer.scss */
 .footer-media-icon {
   position: absolute;
   top: 25%;
@@ -1193,12 +1208,12 @@ path {
   left: -50%;
   z-index: 5;
 }
-/* line 68, scss/style/modules/_footer.scss */
+/* line 78, scss/style/modules/_footer.scss */
 .footer-media-icon path {
   fill: #444;
 }
 
-/* line 73, scss/style/modules/_footer.scss */
+/* line 83, scss/style/modules/_footer.scss */
 .footer-media-label {
   position: absolute;
   top: 45%;
@@ -1210,25 +1225,25 @@ path {
 }
 
 @media only screen and (max-width: 568px) {
-  /* line 87, scss/style/modules/_footer.scss */
+  /* line 97, scss/style/modules/_footer.scss */
   .footer {
     width: 100%;
     padding: 24px;
   }
 
-  /* line 88, scss/style/modules/_footer.scss */
+  /* line 98, scss/style/modules/_footer.scss */
   .footer-me {
     position: relative;
     width: 100%;
     height: 280px;
   }
 
-  /* line 90, scss/style/modules/_footer.scss */
+  /* line 100, scss/style/modules/_footer.scss */
   .footer-contacts {
     width: 100%;
   }
 
-  /* line 92, scss/style/modules/_footer.scss */
+  /* line 102, scss/style/modules/_footer.scss */
   .footer-media {
     clear: both;
     float: none;
@@ -1238,23 +1253,23 @@ path {
   }
 }
 @media only screen and (min-width: 569px) and (max-width: 768px) {
-  /* line 103, scss/style/modules/_footer.scss */
+  /* line 113, scss/style/modules/_footer.scss */
   .footer {
     width: 468px;
   }
 
-  /* line 105, scss/style/modules/_footer.scss */
+  /* line 115, scss/style/modules/_footer.scss */
   .footer-me {
     width: 468px;
     height: 320px;
   }
 
-  /* line 106, scss/style/modules/_footer.scss */
+  /* line 116, scss/style/modules/_footer.scss */
   .footer-contacts {
     width: 468px;
   }
 
-  /* line 107, scss/style/modules/_footer.scss */
+  /* line 117, scss/style/modules/_footer.scss */
   .footer-media {
     width: 468px;
     margin-bottom: 12px;
@@ -1262,12 +1277,12 @@ path {
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 1152px) {
-  /* line 115, scss/style/modules/_footer.scss */
+  /* line 125, scss/style/modules/_footer.scss */
   .footer {
     width: 708px;
   }
 
-  /* line 117, scss/style/modules/_footer.scss */
+  /* line 127, scss/style/modules/_footer.scss */
   .footer-me {
     width: 708px;
     height: 440px;
