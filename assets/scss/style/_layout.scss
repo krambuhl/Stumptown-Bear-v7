@@ -14,16 +14,20 @@
     @include respond(huge)   { @include rgrid(huge);   } 
 }   
 
-.layout-section {
+.layout-section {   
+    display: block;
     margin-top: $spacing-quad;
 }
 
-
+#contact {
+    
+    margin-bottom: $spacing * 8;
+}
 
 * {
-    @include transition-property(width, height, margin, padding);
-    @include transition-duration(0.25s);
-    @include transition-timing-function(ease-in);
+    @include transition-property(width, height, margin, padding, opacity, background-color, color, top, font);
+    @include transition-duration(0.37s);
+    @include transition-timing-function(ease);
 }
 
 
@@ -46,11 +50,11 @@
     @include transition-property(width, opacity);
     @include transition-duration(0.1s);
     @include transition-timing-function(ease-in);
-    @include opacity(0.05);
+    @include opacity(0);
 
     height: 100%;
     margin: 0 auto;
-    background: url("http://stream.stumptownbear.com/grids/48.12.png") top left repeat;
+    background: url("http://stream.stumptownbear.com/grids/48.12.png") top left repeat;    
     
     @include respond(mobile) { @include rgrid(mobile); }
     @include respond(tablet) { @include rgrid(tablet); }

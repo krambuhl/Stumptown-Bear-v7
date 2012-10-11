@@ -3,43 +3,44 @@
     
 }
  
-.item-content { 
-    margin: 0 auto;
+.item-content {  
+    margin: 12px auto;
     
     p, ul, ol { margin-bottom: $spacing; padding: 0; }
     
     h2, h3, h4, h5 { 
         clear: both;
         margin-bottom: $spacing; 
-        font-size: 24px;
-        font-weight: 500;
+        font-weight: normal;
         line-height: 1.1em;
+        font-weight: 700;      
     }
+    
+    h3, h4 { font-size: 36px; }
+    h5     { font-size: 30px; }
 }
 
 .item-content-title { 
-    margin-top: $spacing;   
-    font-size: 36px !important; 
+    padding-top: $spacing-double;   
+    font-size: 48px; 
 }
 
-.item-content-challenge,
-.item-content-solution {
+.item-content-left,
+.item-content-right {
     @include grid(9);
     margin:  $spacing 0;
     padding: 0 $spacing;
-    
-    h4 { font-size: 30px; }
 }
 
 
-.item-content-challenge {
-    float: right;
-    text-align: left;
-}
-
-.item-content-solution {
-    float: left; 
+.item-content-left {
+    float: left;
     text-align: right;
+}
+
+.item-content-right {
+    float: right; 
+    text-align: left;
 }
 
 .item-content > p {
@@ -55,33 +56,39 @@
 }
 
 @include respond(mobile) { 
+    .item-content-title { font-size: 36px; }
     .item-content   { @include rgrid(mobile); }
+    .item-content p   { font-size: 18px; line-height: 28px; }
     .item-content > p { @include rgrid(mobile); }
     
-    .item-content-challenge,
-    .item-content-solution {
+    .item-content-left,
+    .item-content-right {
         @include rgrid(mobile);
         text-align: center;
     }
 }
 
 @include respond(tablet) { 
+    .item-content-title { font-size: 36px; }
     .item-content     { @include rgrid(tablet); }
+    .item-content p   { font-size: 18px; line-height: 28px; }
     .item-content > p { @include rgrid(tablet); }
     
-    .item-content-challenge,
-    .item-content-solution {
+    .item-content-left,
+    .item-content-right {
         @include rgrid(tablet);
         text-align: center;
     }
 }
 
 @include respond(small) { 
+    .item-content-title { font-size: 40px; }
     .item-content     { @include rgrid(small); }
+    .item-content p   { font-size: 18px; line-height: 28px; }
     .item-content > p { @include rgrid(tablet); }
     
-    .item-content-challenge,
-    .item-content-solution {
+    .item-content-left,
+    .item-content-right {
         @include grid(6);
     }
 }

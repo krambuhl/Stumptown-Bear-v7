@@ -24,11 +24,13 @@
     
     <!-- library scripts  -->
 	<script src="assets/library/jquery.min.js"></script>
-	<script src="assets/library/raphael.min.js"></script>
 	<script src="assets/library/jquery.mustache.js"></script>
-	<script src="assets/library/jquery.ui.map.js"></script>
-    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-    <script src="assets/scripts/jquery.vectorectus.js"></script>  
+	<script src="assets/library/modernizr.js"></script> 
+	<script src="assets/library/jgestures.min.js"></script>
+	
+	<script src="assets/library/raphael.min.js"></script>
+    <script src="assets/scripts/jquery.vectorectus.js"></script> 
+    <script src="assets/scripts/jquery.bobsled.js"></script> 
     
 	<!-- user library scripts / @font-face -->
     <link href="assets/fonts/fonts.css" rel="stylesheet" />
@@ -43,7 +45,6 @@
 </head>
 
 <body>
-
 <div class="grid"><div class="grid-display"></div></div>
 
 <header id="header" class="layout-header" data-parallax-speed="1.2">
@@ -52,24 +53,33 @@
         <h1  class="heading-title">Stumptown Bear</h1>
         
         <nav><ul class="heading-nav">
-            <li><a href="#/work/">Work</a></li>
-            <li><a href="#/history/">History</a></li>
-            <li><a href="#/contact/">Contact</a></li>
+            <li><a class="heading-nav-work"     href="#/work/">Work</a></li>
+            <li><a class="heading-nav-history"  href="#/history/">History</a></li>
+            <li><a class="heading-nav-contact"  href="#/contact/">Contact</a></li>
         </ul></nav>
     </div>
 </header>
 
-<section id="work" class="layout-section" data-parallax-speed="1.4" data-template="mustache/work.mustache">
+<section id="work" class="layout-section" data-template="mustache/work.mustache">
     <header  class="header header-work">
         <h2  class="header-title">Work</h2>
-        <div class="header-arrow header-arrow-down" data-vectorectus="arrow.up"></div>
+        <div class="header-arrow header-arrow-down" data-vectorectus="arrow.angle"></div>
     </header>
 </section>
 
-<section id="history" class="layout-section" data-parallax-speed="1.3">
+<section id="partners" class="layout-section">
+    <header  class="header header-partners">
+        <h2  class="header-title">Partners</h2>
+        <div class="header-arrow header-arrow-down" data-vectorectus="arrow.angle"></div>
+    </header>
+    
+    <section class="partner" data-template="mustache/partner.mustache"></section>
+</section>
+
+<section id="history" class="layout-section">
     <header class="header header-history">
         <h2 class="header-title">History</h2>
-        <div class="header-arrow header-arrow-up vectorectus" data-vectorectus="arrow.up"></div>
+        <div class="header-arrow header-arrow-up vectorectus" data-vectorectus="arrow.angle"></div>
     </header>
     
     <section class="timeline">
@@ -77,29 +87,28 @@
     </section>
 </section>
 
-<section id="contact" class="layout-section" data-parallax-speed="1.2">
+<section id="contact" class="layout-section">
     <header class="header header-contact">
         <h2 class="header-title">Contact</h2>
-        <div class="header-arrow header-arrow-up" data-vectorectus="arrow.up"></div>
+        <div class="header-arrow header-arrow-up" data-vectorectus="arrow.angle"></div>
     </header>
     
     <section class="footer">
-        <p>There are a few different ways to get a hold of me, feel free to drop a line to say hello or ask for my expertise on your project.</p>
+        <div class="footer-me">
+            <img class="footer-me-thats-me" src="http://stream.stumptownbear.com/portfolio/this-is-me/evan.jpg" />
+        </div>
+        
+        <div class="footer-paragraph">There are a few different ways to get a hold of me, feel free to drop a line to say hello or ask for my expertise on your project.</div>
         
         <ul class="footer-contacts">
-            <li class="media"><a hre="https://twitter.com/evan_is">
-                <i class="media-icon media-icon-48" data-shape="logo.twitter"></i>
-                <span class="media-label">@evan</span>
+            <li class="footer-media"><a href="https://twitter.com/evan_is">
+                <i class="footer-media-icon" data-vectorectus="logo.twitter"></i>
+                <span class="footer-media-label">@evan_is</span>
             </a></li>
             
-            <li class="media"><a hre="https://twitter.com/evan_is">
-                <i class="media-icon media-icon-48" data-vectorectus-shape="icon.mail"></i>
-                <span class="media-label">evan.krambuhl@gmail.com</span>
-            </a></li>
-            
-            <li class="media"><a hre="https://twitter.com/evan_is">
-                <i class="media-icon media-icon-48" data-vectorectus-shape="icon.phone"></i>
-                <span class="media-label">(971) 340-6170</span>
+            <li class="footer-media"><a href="mailto:evan.krambuhl@gmail.com">
+                <i class="footer-media-icon" data-vectorectus="icon.mail"></i>
+                <span class="footer-media-label">evan@stumptownbear.com</span>
             </a></li>
         </ul>
     </section>

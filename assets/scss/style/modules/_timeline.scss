@@ -1,0 +1,79 @@
+.timeline { 
+    margin-top: $spacing-quad; 
+    padding-bottom: $spacing; 
+} 
+
+.timeline-item {
+    position: relative;
+    margin: 0 auto 0 auto;
+    padding: $spacing-double;
+    
+    @include transition-duration(2s);
+    
+    @include grid(12); 
+    @include clearfix();
+    
+    @include opacity(1);
+}
+
+.timeline-item.is-hidden { @include opacity(0); }
+
+
+.timeline-item-date {
+    display: block;
+    @include grid(3); 
+    height: 55px;
+    margin: 0 auto 10px auto;
+    padding: ($spacing * 1) 0;
+    
+    text-align: center;
+    
+    font-family: "Museo Slab";
+    font-weight: 500;
+    font-size: 24px;
+    
+    color: #fff;
+    background-color: #ddd;
+}
+
+.timeline-item-story {
+    text-align: center;
+    line-height: 32px;
+    font-size: 20px;     
+}
+
+.touch .timeline-item-date  {
+    background-color: #222; 
+    color: lighten(#396f85, 58%); 
+}
+
+.timeline-item.scroll {    
+    background-color: lighten(#396f85, 58%); 
+    @include transition-duration(0.15s);
+    @include opacity(1);
+    
+    .timeline-item-date  {
+        background-color: #222; 
+        color: lighten(#396f85, 58%); 
+    }
+    .timeline-item-story { @include opacity(1); }
+    
+    & ~ .timeline-item { @include opacity(0.25); }
+
+}
+
+
+@include respond(mobile) {
+    .timeline-item { width: 100%; }
+    .timeline-item-date  { }
+}
+
+@include respond(tablet) {
+    .timeline-item { @include rgrid(tablet); }
+    .timeline-item-date  { }
+}
+
+@include respond(small) {
+    .timeline-item { @include rgrid(small); }
+    .timeline-item-date  { }
+}

@@ -1,0 +1,59 @@
+.partner {
+    @include grid(16);
+    margin: $spacing-quad auto;
+    @include clearfix();
+    
+    
+    & > p { margin: $spacing-quad 0; text-align: center; }
+}
+
+.partner-item {
+    position: relative;
+    float: left;
+    @include grid(4);
+    height: grid_width(4);
+    margin-bottom: $spacing;
+    padding: $spacing-double;
+    
+    text-align: left;
+    word-spacing: 999em;
+    
+    color: white;
+    background: #333;
+    
+    &:not(:nth-child(4n+1)) { margin-left: $gutter; }
+}
+
+.partner-name {
+    line-height: 1.1em;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.partner-genre { 
+    display: block;
+    position: absolute;
+    bottom: $spacing * 1.2;
+    left:   $spacing-double;
+    
+    font-size: 14px; 
+}
+
+
+@include respond(mobile) { 
+    .partner { width: 100%; padding: $spacing-double; }
+    .partner-item { float: none; margin: 0 auto $gutter auto; }
+    .partner-item:not(:nth-child(4n+1)) { margin-left: auto; }
+}
+
+@include respond(tablet) { 
+    .partner { @include grid(8); }
+    .partner-item:not(:nth-child(4n+1)) { margin-left: auto; }
+    .partner-item:not(:nth-child(2n+1)) { margin-left: $gutter; }
+}
+
+@include respond(small) { 
+    .partner { @include grid(12); }
+    .partner-item:not(:nth-child(4n+1)) { margin-left: auto; }
+    .partner-item:not(:nth-child(3n+1)) { margin-left: $gutter; }
+}

@@ -4,12 +4,13 @@
     padding: 130px 0 160px;
     background: #333;
       
-    @include respond(mobile) { padding: 100px 0 120px; }
-    @include respond(tablet) { padding: 110px 0 130px; }
-    
-    @include respond(large)  { padding: 150px 0 180px; }
-    @include respond(huge)   { padding: 170px 0 200px; } 
+
+    path {
+        fill: white;
+    }
 }
+
+
 
 .heading-icon {    
     margin: 0 auto;
@@ -20,11 +21,12 @@
 }
 
 .heading-title {
-    margin: $spacing auto 0 auto;
+    margin: $spacing-double auto $spacing auto;
     text-align: center;
     
-    font-size: 30px;
-    font-weight: 300;
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: 1px;
     
     color: white;
 }
@@ -32,17 +34,17 @@
 .heading-nav { 
     display: block;
     margin: 0 auto;
-    @include grid(4);
+    @include grid(5);
     
-    color: white;
-    font-weight: 300;
-    
-    font-family:$site-header-fontfamily;
-    font-size: 16px;
+    text-align: center;
     text-transform: uppercase;
+    font-family: $site-header-fontfamily;
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
     
     & > li {
-        float: left;
+        display: inline-block;
         
         &:not(:last-child):after {
             content: '.';
@@ -52,3 +54,14 @@
     
     & > li > a { color: white; text-decoration: none; }
 }
+
+.heading-nav-work:hover    { color: #45c366; border-bottom: 1px solid #45c366; }
+.heading-nav-history:hover { color: #1ba4db; border-bottom: 1px solid #1ba4db; }
+.heading-nav-contact:hover { color: #d44242; border-bottom: 1px solid #d44242; }
+
+    @include respond(mobile) { .heading { padding: 100px 0 120px; } .heading-title { font-size: 36px; margin: $spacing auto $spacing-half auto;} }
+    @include respond(tablet) { .heading { padding: 90px 0 100px; }  .heading-title { font-size: 36px; margin: $spacing auto $spacing-half auto; }}
+    @include respond(small)  { .heading { padding: 80px 0 90px; }  }
+                               .heading {                         }  
+    @include respond(large)  { .heading { padding: 150px 0 180px; }  }
+    @include respond(huge)   { .heading { padding: 170px 0 200px; }  } 

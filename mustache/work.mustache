@@ -2,11 +2,11 @@
     <article class="item" id="{{id}}">
         <section class="slider">
             <ul class="slider-list">{{#media}}
-                <li class="slider-frame"><img class="slider-image" src="{{.}}" /></li>
+                <li class="slider-frame"><a href="#{{link}}{{index}}"><img class="slider-image" src="{{url}}" /></a></li>
             {{/media}}</ul>
             
             <nav class="slider-selector"><ol>{{#media}}
-                <li class="slider-selector-item"><a href="#{{link}}/"></a></li>
+                <li class="slider-selector-item"><a href="#{{link}}{{index}}"></a></li>
             {{/media}}</ol></nav>
         </section>
         
@@ -22,6 +22,4 @@
         	{{/technologies}}</ul>
         </section>
     </article>
-    
-    <hr />
 {{/work}}
